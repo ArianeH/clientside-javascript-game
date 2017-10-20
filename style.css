@@ -9,3 +9,11 @@
 .red {
   color: red;
 }
+
+.invisible {
+  display: none;
+}
+
+.visibile {
+  display: block;
+}
