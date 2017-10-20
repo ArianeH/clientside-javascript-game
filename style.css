@@ -20,6 +20,13 @@
 }
 
 td {
-  height: 120px;
-  width: 120px;
+  height: 150px;
+  width: 150px;
+  // border: solid red 1px;
+  background-image: url("water.jpg");
+  background-size: cover;
+}
+
+.fa-ship {
+  color: white;
 }

@@ -1,15 +1,17 @@
 setInterval(function getRandomElement() {
   var selected = getElement("invisible", getRandomNumber(9));
-  console.log(selected)
-  selected.classList.remove("invisible");
-  selected.classList.add("visible");
-  selected.addEventListener( 'click', getPoint);
+  selected.className = "visible";
 
-  setInterval(function changeToInvisible() {
-    selected.classList.remove("visible");
-    selected.classList.add("invisible");
+  // setTimeout(function increaseSize() {
+  //   var ship = selected.getElementsByClassName("fa fa-ship fa-3x")[0];
+  //   ship.className = "fa fa-ship fa-5x";
+  // },2000);
+
+  selected.addEventListener( 'click', function() { getPoint(selected) });
+
+  setTimeout(function changeToInvisible() {
+    selected.className = "invisible";
   },3000);
-
 },4000);
 
 function getRandomNumber(max) {
@@ -20,9 +22,7 @@ function getElement(className, num) {
   return document.getElementsByClassName(className)[num];
 }
 
-function getPoint() {
-  var element = getElement("visible", 0);
-  element.classList.remove("visible");
-  element.classList.add("invisible");
+function getPoint(element) {
+  element.className = "invisible";
   var currentScore = getElement("score", 0).innerHTML++;
 }
