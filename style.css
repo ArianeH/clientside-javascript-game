@@ -1,0 +1,11 @@
+.game-wrapper {
+  margin-top: 50px;
+}
+
+.game-table > tbody > tr > td > div {
+  margin: 20px 20px;
+}
+
+.red {
+  color: red;
+}
