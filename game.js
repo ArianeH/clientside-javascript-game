@@ -1,5 +1,5 @@
 setInterval(function getRandomElement() {
-  var selected = getElement("invisible");
+  var selected = getElement("invisible", getRandomNumber(9));
   console.log(selected)
   selected.classList.remove("invisible");
   selected.classList.add("visible");
@@ -16,12 +16,14 @@ function getRandomNumber(max) {
   return Math.floor(Math.random() * max);
 }
 
-function getElement(className) {
-  return document.getElementsByClassName(className)[getRandomNumber(9)];
+function getElement(className, num) {
+  return document.getElementsByClassName(className)[num];
 }
 
 function getPoint() {
-  var element = document.getElementsByClassName("visible")[0];
+  var element = getElement("visible", 0);
   element.classList.remove("visible");
   element.classList.add("invisible");
+  var scoreList = getElement("score", 0);
+  scoreList.innerHTML += 1;
 }
