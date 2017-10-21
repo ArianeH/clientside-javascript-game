@@ -25,7 +25,14 @@ function getElement(className, num) {
 function getPoint(element) {
   // element.classList.add("red").animationDelay = "2s";
   element.className = "invisible";
-  element.firstChild.className = "fa fa-fighter-jet fa-3x";
+
+  var num = getRandomNumber(9)
+  if ((num <= 2) && (element.firstChild.className = "fa fa-ship fa-3x")) {
+    element.firstChild.className = "fa fa-fighter-jet fa-3x";
+  } else {
+    element.firstChild.className = "fa fa-ship fa-3x";
+  }
+
   var currentScore = getElement("score", 0).innerHTML++;
 }
 
