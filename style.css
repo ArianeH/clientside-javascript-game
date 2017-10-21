@@ -5,10 +5,7 @@
 .game-table > tbody > tr > td > div {
   margin: 20px 20px;
   text-align: center;
-}
-
-.red {
-  color: red;
+  color: white;
 }
 
 .invisible {
@@ -19,6 +16,10 @@
   display: block;
 }
 
+.visible:hover {
+  color: red;
+}
+
 td {
   height: 150px;
   width: 150px;
@@ -27,6 +28,6 @@ td {
   background-size: cover;
 }
 
-.fa-ship {
-  color: white;
+.red {
+  color: red !important;
 }

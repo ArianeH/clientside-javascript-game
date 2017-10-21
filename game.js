@@ -23,6 +23,9 @@ function getElement(className, num) {
 }
 
 function getPoint(element) {
+  // element.classList.add("red").animationDelay = "2s";
   element.className = "invisible";
+  element.firstChild.className = "fa fa-fighter-jet fa-3x";
   var currentScore = getElement("score", 0).innerHTML++;
 }
+
