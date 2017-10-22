@@ -4,7 +4,7 @@ const smallShark = "fa fa-fighter-jet fa-3x"
 const largeShark = "fa fa-fighter-jet fa-4x"
 
 setInterval(function getRandomElement() {
-  var selected = getElement("invisible", getRandomNumber(9));
+  var selected = getElement("invisible", getRandomNumber(1));
   selected.className = "visible";
   var ship = selected.getElementsByClassName("fa fa-ship")[0];
 
@@ -18,10 +18,10 @@ setInterval(function getRandomElement() {
 
   setTimeout(function changeToInvisible() {
     selected.className = "invisible";
-    ship.className = smallShip;
+    changeToSharkOrShip(selected.firstChild);
     selected.removeEventListener('click', getPointFunction);
-  },1000);
-},2000);
+  },2000);
+},3000);
 
 function getRandomNumber(max) {
   return Math.floor(Math.random() * max);
@@ -38,19 +38,21 @@ function getPoint(element) {
   var currentScore = getElement("score", 0);
   var elementsFirstChild = element.firstChild
 
-  if ((elementsFirstChild.className == smallShark || largeShark) && currentScore.innerHTML > 0) {
+  if (((elementsFirstChild.className == smallShark) || (elementsFirstChild.className == largeShark)) && currentScore.innerHTML > 0) {
     currentScore.innerHTML--;
-  } else if (elementsFirstChild.className == smallShip || largeShip) {
+  } else if ((elementsFirstChild.className == smallShip) || (elementsFirstChild.className == largeShip)) {
     currentScore.innerHTML++;
   }
 
-  changeToSharkOrShip(elementsFirstChild);
+  // changeToSharkOrShip(elementsFirstChild);
 }
 
 function changeToSharkOrShip(elementsFirstChild) {
   var num = getRandomNumber(10)
   if (num <= 3) {
+    console.log("HEEEEELLLLLOOOOO!!!!!!!!!!!!!!")
     elementsFirstChild.className = largeShark;
+        console.log("HEEEEELLLLLOOOOO!!!!!!!!!!!!!!")
   } else {
     elementsFirstChild.className = smallShip;
   }
