@@ -1,38 +1,31 @@
 .game-wrapper {
   margin-top: 50px;
 }
-
 .game-table > tbody > tr > td > div {
   margin: 20px 20px;
   text-align: center;
   color: white;
 }
-
-.invisible {
-  display: none;
-}
-
-.visible {
-  display: block;
-}
-
-.visible:hover {
-  color: lightyellow;
-}
-
-td {
+.game-table > tbody > tr > td {
   height: 220px;
   min-width: 120px;
   // border: solid red 1px;
   background-image: url("ocean.jpg");
   background-size: cover;
 }
-
+.cta-btn {
+  margin: 0px 20px;
+}
+.invisible {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.visible:hover {
+  color: lightyellow;
+}
 .red {
   color: red !important;
   font-size: 120%;
-}
-
-#start-btn {
-  margin: 0px 20px;
 }
