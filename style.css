@@ -1,6 +1,9 @@
 .game-wrapper {
   margin-top: 50px;
 }
+.game-table {
+  margin: 20px 0px;
+}
 .game-table > tbody > tr > td > div {
   margin: 20px 20px;
   text-align: center;

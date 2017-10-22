@@ -7,11 +7,24 @@ const startButton = document.getElementById("start-btn")
 
 startButton.addEventListener('click', gameFunction)
 
+var startTime = 100
+document.getElementById("timer").innerHTML = startTime
+
+function runTimer() {
+  // while (startTime > 0) {
+    setInterval(function decreaseTime() {
+      startTime--;
+      document.getElementById("timer").innerHTML = startTime;
+    },100);
+  // }
+}
+
 function resetGameFunction() {
   currentScore.innerHTML = 0;
 }
 
 function gameFunction() {
+  runTimer();
   setInterval(function getRandomElement() {
     var selected = getElement("invisible", getRandomNumber(9));
     selected.className = "visible";
