@@ -17,7 +17,7 @@
 }
 
 .visible:hover {
-  color: red;
+  color: lightyellow;
 }
 
 td {
@@ -30,4 +30,5 @@ td {
 
 .red {
   color: red !important;
+  font-size: 120%;
 }
