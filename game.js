@@ -17,8 +17,8 @@ setInterval(function getRandomElement() {
   setTimeout(function changeToInvisible() {
     selected.className = "invisible";
     selected.removeEventListener('click', getPointFunction);
-  },2000);
-},3000);
+  },1000);
+},2000);
 
 function getRandomNumber(max) {
   return Math.floor(Math.random() * max);
