@@ -21,7 +21,7 @@
 }
 
 td {
-  height: 180px;
+  height: 220px;
   min-width: 120px;
   // border: solid red 1px;
   background-image: url("ocean.jpg");
@@ -31,4 +31,8 @@ td {
 .red {
   color: red !important;
   font-size: 120%;
+}
+
+#start-btn {
+  margin: 0px 20px;
 }
