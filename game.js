@@ -11,12 +11,12 @@ var startTime = 100
 document.getElementById("timer").innerHTML = startTime
 
 function runTimer() {
-  // while (startTime > 0) {
-    setInterval(function decreaseTime() {
+  setInterval(function decreaseTime() {
+    if (startTime > 0) {
       startTime--;
       document.getElementById("timer").innerHTML = startTime;
-    },100);
-  // }
+    }
+  },100);
 }
 
 function resetGameFunction() {
