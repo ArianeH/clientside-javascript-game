@@ -21,11 +21,16 @@ function runTimer() {
 
 function resetGameFunction() {
   currentScore.innerHTML = 0;
+  startTime = 101;
 }
 
 function gameFunction() {
   runTimer();
+
   setInterval(function getRandomElement() {
+    if (startTime == 0) {
+      return;
+    }
     var selected = getElement("invisible", getRandomNumber(9));
     selected.className = "visible";
     var ship = selected.getElementsByClassName("fa fa-ship")[0];
@@ -49,7 +54,7 @@ function gameFunction() {
   startButton.id = "reset-btn";
   startButton.innerHTML = "Reset Game!";
   startButton.removeEventListener('click', gameFunction);
-  document.getElementById("reset-btn").addEventListener('click', resetGameFunction)
+  document.getElementById("reset-btn").addEventListener('click', resetGameFunction);
 }
 
 function getRandomNumber(max) {
