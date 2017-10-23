@@ -3,9 +3,11 @@ const largeShip = "fa fa-ship fa-4x"
 const smallShark = "fa fa-fighter-jet fa-3x"
 const largeShark = "fa fa-fighter-jet fa-4x"
 const currentScore = getElement("score", 0);
-const startButton = document.getElementById("start-btn")
+const startButton1 = document.getElementById("start-btn-1")
+const startButton2 = document.getElementById("start-btn-2")
 
-startButton.addEventListener('click', gameFunction)
+startButton1.addEventListener('click', gameFunction)
+startButton2.addEventListener('click', gameFunction)
 
 var startTime = 100
 document.getElementById("timer-1").innerHTML = startTime
