@@ -1,20 +1,50 @@
+.container {
+  background-color: #f3f3f3;
+  width: auto;
+  padding: 0px 50px;
+}
+.game-banner {
+  height: 80px;
+  background-color: grey;
+  margin-top: 0px;
+  padding: 20px;
+}
+.game-banner h2 {
+  color: white;
+  margin: 0px;
+}
 .game-wrapper {
-  margin-top: 50px;
+  margin-top: 10px;
+  padding-top: 10px;
+  background-color: #4d82b4;
+}
+.game-wrapper .level-wrapper {
+  margin-left: 20px;
 }
 .game-table {
-  margin: 20px 0px;
+  width: 100%;
+  margin: 10px 0px;
 }
-.game-table > tbody > tr > td > div {
-  margin: 20px 20px;
-  text-align: center;
-  color: white;
+.game-table > tbody {
+  width: 100%;
+}
+.game-table > tbody > tr {
+  display: flex;
+  width: 100%;
 }
 .game-table > tbody > tr > td {
-  height: 220px;
-  min-width: 120px;
-  // border: solid red 1px;
+  height: 500px;
+  flex: 0 0 calc(100%/9);
   background-image: url("ocean.jpg");
   background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.game-table > tbody > tr > td > div {
+  margin: auto;
+  text-align: center;
+  color: white;
+
 }
 .cta-btn {
   margin: 0px 20px;

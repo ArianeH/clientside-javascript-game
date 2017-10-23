@@ -19,7 +19,7 @@ function runTimer() {
   },100);
 }
 
-function resetGameFunction() {
+function restartGameFunction() {
   currentScore.innerHTML = 0;
   startTime = 101;
 }
@@ -51,10 +51,10 @@ function gameFunction() {
       selected.removeEventListener('click', getPointFunction);
     },2000);
   },3000);
-  startButton.id = "reset-btn";
-  startButton.innerHTML = "Reset Game!";
+  startButton.id = "restart-btn";
+  startButton.innerHTML = "Restart Game!";
   startButton.removeEventListener('click', gameFunction);
-  document.getElementById("reset-btn").addEventListener('click', resetGameFunction);
+  document.getElementById("restart-btn").addEventListener('click', restartGameFunction);
 }
 
 function getRandomNumber(max) {
