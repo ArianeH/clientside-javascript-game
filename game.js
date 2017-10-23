@@ -8,13 +8,14 @@ const startButton = document.getElementById("start-btn")
 startButton.addEventListener('click', gameFunction)
 
 var startTime = 100
-document.getElementById("timer").innerHTML = startTime
+document.getElementById("timer-1").innerHTML = startTime
+document.getElementById("timer-2").innerHTML = startTime
 
 function runTimer() {
   setInterval(function decreaseTime() {
     if (startTime > 0) {
       startTime--;
-      document.getElementById("timer").innerHTML = startTime;
+      document.getElementById("timer-1").innerHTML = startTime;
     }
   },100);
 }
