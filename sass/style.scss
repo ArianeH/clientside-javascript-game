@@ -8,52 +8,50 @@
   background-color: grey;
   margin-top: 0px;
   padding: 20px;
-}
-.game-banner h2 {
-  color: white;
-  margin: 0px;
+  h2 {
+    color: white;
+    margin: 0px;
+  }
 }
 .game-wrapper {
   margin-top: 10px;
   padding-top: 10px;
   background-color: #4d82b4;
-}
-.game-wrapper .level-wrapper {
-  margin-left: 20px;
+  .level-wrapper {
+    margin-left: 20px;
+  }
 }
 .game-table {
   width: 100%;
   margin: 10px 0px;
-}
-.game-table > tbody {
-  width: 100%;
-}
-.game-table > tbody > tr {
-  display: flex;
-  width: 100%;
+  tbody {
+    width: 100%;
+    tr {
+     display: flex;
+     width: 100%;
+     td {
+      height: 500px;
+      flex: 0 0 calc(100%/9);
+      display: flex;
+      align-items: center;
+      div {
+        margin: auto;
+        text-align: center;
+        color: white;
+        }
+      }
+    }
+  }
 }
 .game-1 .game-table > tbody > tr > td {
-  height: 500px;
-  flex: 0 0 calc(100%/9);
   background-image: url("../images/ocean.jpg");
   background-size: cover;
-  display: flex;
-  align-items: center;
 }
 .game-2 .game-table > tbody > tr > td {
-  height: 500px;
-  flex: 0 0 calc(100%/9);
   background-image: url("../images/under-water-2.jpg");
   background-position: 0px -225px;
   background-size: 100% 150%;
-  display: flex;
-  align-items: center;
   filter: grayscale(80%) contrast(125%) saturate(180%);
-}
-.game-table > tbody > tr > td > div {
-  margin: auto;
-  text-align: center;
-  color: white;
 }
 .cta-btn {
   margin: 0px 20px;
