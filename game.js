@@ -32,12 +32,13 @@ function gameFunction() {
 
   setInterval(function getRandomElement() {
     if (startTime == 0) {
+      scrollNextGame();
       return;
     }
     var selected = getElement("invisible", getRandomNumber(9));
     selected.className = "visible";
-    var ship = selected.getElementsByClassName("fa fa-ship")[0];
 
+    var ship = selected.getElementsByClassName("fa fa-ship")[0];
     if (ship) {
       setTimeout(function increaseSize() {
         ship.className = largeShip;
@@ -45,7 +46,6 @@ function gameFunction() {
     }
 
     var getPointFunction = function() { getPoint(selected) }
-
     selected.addEventListener( 'click', getPointFunction);
 
     setTimeout(function changeToInvisible() {
@@ -54,10 +54,14 @@ function gameFunction() {
       selected.removeEventListener('click', getPointFunction);
     },2000);
   },3000);
-  startButton.id = "restart-btn";
-  startButton.innerHTML = "Restart Game!";
-  startButton.removeEventListener('click', gameFunction);
+  startButton1.id = "restart-btn";
+  startButton1.innerHTML = "Restart Game!";
+  startButton1.removeEventListener('click', gameFunction);
   document.getElementById("restart-btn").addEventListener('click', restartGameFunction);
+}
+
+function scrollNextGame() {
+  document.getElementById('timer-2').scrollIntoView({block: 'start', behavior: 'smooth'});
 }
 
 function getRandomNumber(max) {

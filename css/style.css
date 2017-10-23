@@ -48,7 +48,10 @@
   filter: grayscale(80%) contrast(125%) saturate(180%); }
 
 .cta-btn {
-  margin: 0px 20px; }
+  margin: 0px 15px 0px 0px; }
+
+.score {
+  margin-right: 20px; }
 
 .invisible {
   display: none; }
