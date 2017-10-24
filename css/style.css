@@ -37,11 +37,12 @@
           text-align: center;
           color: white; }
 
-.game-1 .game-table > tbody > tr > td {
+.game-1 .game-table > tbody > tr {
   background-image: url("../images/ocean.jpg");
+  background-position: 0px -10px;
   background-size: cover; }
 
-.game-2 .game-table > tbody > tr > td {
+.game-2 .game-table > tbody > tr {
   background-image: url("../images/under-water-2.jpg");
   background-position: 0px -225px;
   background-size: 100% 150%;
