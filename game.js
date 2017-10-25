@@ -10,8 +10,6 @@ startButton1.addEventListener('click', gameFunctionLevel1)
 startButton2.addEventListener('click', gameFunctionLevel2)
 
 var startTime
-// document.getElementById("timer-1").innerHTML = startTime
-// document.getElementById("timer-2").innerHTML = startTime
 
 function runTimer(timerId) {
   startTime = 100;
@@ -22,11 +20,6 @@ function runTimer(timerId) {
       document.getElementById(timerId).innerHTML = startTime;
     }
   },100);
-}
-
-function restartGameFunction() {
-  currentScore.innerHTML = 0;
-  startTime = 101;
 }
 
 function gameFunctionLevel1() {
@@ -72,6 +65,11 @@ function getRandomElement() {
     changeToSharkOrShip(selected.firstChild);
     selected.removeEventListener('click', getPointFunction);
   },2000);
+}
+
+function restartGameFunction() {
+  currentScore.innerHTML = 0;
+  startTime = 101;
 }
 
 function scrollNextGame() {
