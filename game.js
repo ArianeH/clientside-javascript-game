@@ -7,7 +7,7 @@ const startButton1 = document.getElementById("start-btn-1")
 const startButton2 = document.getElementById("start-btn-2")
 
 startButton1.addEventListener('click', gameFunctionLevel1)
-startButton2.addEventListener('click', gameFunctionLevel2)
+// startButton2.addEventListener('click', gameFunctionLevel2)
 
 var startTime
 
@@ -72,9 +72,59 @@ function restartGameFunction() {
   startTime = 101;
 }
 
+// function scrollNextGame() {
+//   document.getElementById('timer-2').scrollIntoView({block: 'start', behavior: 'smooth'});
+// }
+
+// function scrollNextGame() {
+//     var elem = document.getElementById("game-1"),
+//         speed = 100,
+//         currentPos = 0;
+//     // Reset the element
+//     elem.style.left = 0 + 'px';
+//     elem.style.right = "auto";
+//     var motionInterval = setInterval(function() {
+//         currentPos += speed;
+//         if (currentPos >= 800 && speed > 0) {
+//            currentPos = 800;
+//            speed = -2 * speed;
+//            elem.style.width = parseInt(elem.style.width)*2+"px";
+//            elem.style.height = parseInt(elem.style.height)*2+"px";
+//         }
+//         if (currentPos <= 0 && speed < 0) {
+//            clearInterval(motionInterval);
+//         }
+//         elem.style.left = currentPos + 'px';
+//     },20);
+// }
+
+
 function scrollNextGame() {
-  document.getElementById('timer-2').scrollIntoView({block: 'start', behavior: 'smooth'});
+  console.log("HELLO")
+  var speed = 1000, // the box will move by 10 pixels on every step
+  direction = 1; // 1 moves in the positive direction; -1 vice versa
+
+  var boxElement = document.getElementById('game-1');
+
+  // if (boxElement) {
+    // boxElement.addEventListener('mouseover', function () {
+      // Calculate and store some of the box coordinates:
+      // var boxLeftPos = boxElement.offsetLeft,
+      // boxRightPos = boxLeftPos + boxElement.offsetWidth;
+      // When right side of the box goes too far - change direction:
+      // if (boxRightPos > document.body.offsetWidth) {
+      //   direction = -1;
+      // }
+      // // When left side of the box goes too far - change direction:
+      // if (boxLeftPos < 0) {
+      //   direction = 1;
+      // }
+      // Recalculate position:
+      boxElement.style.marginTop = "100px";
+    // });
+  // }
 }
+
 
 function getRandomNumber(max) {
   return Math.floor(Math.random() * max);

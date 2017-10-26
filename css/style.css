@@ -37,7 +37,7 @@
           text-align: center;
           color: white; }
 
-.game-1 .game-table > tbody > tr {
+#game-1 .game-table > tbody > tr {
   background-image: url("../images/ocean.jpg");
   background-position: 0px -10px;
   background-size: cover; }
