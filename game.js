@@ -120,7 +120,7 @@ function scrollNextGame() {
       //   direction = 1;
       // }
       // Recalculate position:
-      boxElement.style.marginTop = "100px";
+      boxElement.style.marginTop = "-300px";
     // });
   // }
 }
