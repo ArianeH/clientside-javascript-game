@@ -1,13 +1,11 @@
-const smallShip = "fa fa-ship fa-3x"
-const largeShip = "fa fa-ship fa-4x"
-const smallShark = "fa fa-fighter-jet fa-3x"
-const largeShark = "fa fa-fighter-jet fa-4x"
+const smallShip = "fa fa-ship fa-3x";
+const largeShip = "fa fa-ship fa-4x";
+const smallShark = "fa fa-fighter-jet fa-3x";
+const largeShark = "fa fa-fighter-jet fa-4x";
 const currentScore = getElement("score", 0);
-const startButton1 = document.getElementById("start-btn-1")
-const startButton2 = document.getElementById("start-btn-2")
+const startButton1 = document.getElementById("start-btn-1");
 
 startButton1.addEventListener('click', gameFunctionLevel1)
-// startButton2.addEventListener('click', gameFunctionLevel2)
 
 var startTime
 
@@ -33,18 +31,21 @@ function gameFunctionLevel1() {
 }
 
 function gameFunctionLevel2() {
-  runTimer("timer-2");
+  var gameTable = getElement("game-table", 0);
+  gameTable.id = "game-2";
+
+  runTimer("timer-1");
 
   setInterval(function() { getRandomElement() },3000);
-  startButton2.id = "restart-btn-2";
-  startButton2.innerHTML = "Restart Game!";
-  startButton2.removeEventListener('click', gameFunctionLevel2);
+  startButton1.id = "restart-btn-2";
+  startButton1.innerHTML = "Restart Game!";
+  startButton1.removeEventListener('click', gameFunctionLevel2);
   document.getElementById("restart-btn-2").addEventListener('click', restartGameFunction);
 }
 
 function getRandomElement() {
   if (startTime == 0) {
-    scrollNextGame();
+    scrollNextLevel();
     return;
   }
   var selected = getElement("invisible", getRandomNumber(9));
@@ -72,9 +73,13 @@ function restartGameFunction() {
   startTime = 101;
 }
 
-function scrollNextGame() {
+function scrollNextLevel() {
   var levelOne = document.getElementById('game-1');
   levelOne.style.marginTop = "-300px";
+  startButton1.id = "start-btn-2";
+  startButton1.innerHTML = "Start Game!";
+  var startButton2 = document.getElementById("start-btn-2");
+  startButton2.addEventListener('click', gameFunctionLevel2);
 }
 
 function getRandomNumber(max) {
