@@ -14,38 +14,38 @@
     margin: 0px;
   }
 }
-.game-wrapper {
-  margin-top: 10px;
-  padding-top: 10px;
+.level-wrapper {
   background-color: #4d82b4;
+  z-index: 2;
+  padding: 10px;
+  margin-top: 10px;
+}
+.game-wrapper {
   overflow: hidden;
   height: 100%;
-  .level-wrapper {
-    margin-left: 20px;
-  }
-}
-.game-table {
-  width: 100%;
-  margin: 10px 0px;
-  tbody {
+  .game-table {
+    z-index: 1;
     width: 100%;
-    tr {
-      display: flex;
+    tbody {
       width: 100%;
-      td {
-        height: 800px;
-        flex: 0 0 calc(100%/9);
+      tr {
         display: flex;
-        align-items: center;
-        position: relative;
-        border: red solid 1px;
-        div {
-          margin: auto;
-          color: white;
-          position: absolute;
-          top: 200px;
-          left: 50%;
-          transform: translateX(-50%);
+        width: 100%;
+        td {
+          height: 800px;
+          flex: 0 0 calc(100%/9);
+          display: flex;
+          align-items: center;
+          position: relative;
+          border: red solid 1px;
+          div {
+            margin: auto;
+            color: white;
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
         }
       }
     }
@@ -83,7 +83,5 @@
 }
 #game-1 {
   -webkit-transition: margin-top 2s ease-out;
-}
-#game-2 {
-  -webkit-transition: margin-top 2s ease-out;
+  z-index: 1;
 }

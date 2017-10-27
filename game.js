@@ -73,10 +73,8 @@ function restartGameFunction() {
 }
 
 function scrollNextGame() {
-  console.log("HELLO")
-
-  var boxElement = document.getElementById('game-1');
-  boxElement.style.marginTop = "-300px";
+  var levelOne = document.getElementById('game-1');
+  levelOne.style.marginTop = "-300px";
 }
 
 function getRandomNumber(max) {
