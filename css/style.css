@@ -38,8 +38,7 @@
           flex: 0 0 calc(100%/9);
           display: flex;
           align-items: center;
-          position: relative;
-          border: red solid 1px; }
+          position: relative; }
           .game-wrapper .game-table tbody tr td div {
             margin: auto;
             color: white;
@@ -51,7 +50,6 @@
   transform: translateX(-50%); }
 
 #game-2 > tbody > tr > td > div {
-  top: 1000px;
   left: 50%;
   transform: translateX(-50%); }
 
