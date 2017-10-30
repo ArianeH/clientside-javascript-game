@@ -31,8 +31,10 @@
       tr {
         display: flex;
         background-image: url("../images/under-water-2.jpg");
-        background-position: 0px -10px;
+        // background-position: 0px -10px;
+        // background-size: 100% 150%;
         background-size: cover;
+        filter: grayscale(80%) contrast(125%) saturate(180%);
         td {
           height: 800px;
           flex: 0 0 calc(100%/9);
@@ -56,14 +58,8 @@
   top: 200px;
 }
 #game-2 > tbody > tr > td > div {
-  top: 200px;
+  top: 500px;
 }
-// .game-2 .game-table > tbody > tr {
-//   background-image: url("../images/under-water-2.jpg");
-//   background-position: 0px -225px;
-//   background-size: 100% 150%;
-//   filter: grayscale(80%) contrast(125%) saturate(180%);
-// }
 .cta-btn {
   margin: 0px 15px 0px 0px;
 }

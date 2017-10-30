@@ -30,15 +30,14 @@
       .game-wrapper .game-table tbody tr {
         display: flex;
         background-image: url("../images/under-water-2.jpg");
-        background-position: 0px -10px;
-        background-size: cover; }
+        background-size: cover;
+        filter: grayscale(80%) contrast(125%) saturate(180%); }
         .game-wrapper .game-table tbody tr td {
           height: 800px;
           flex: 0 0 calc(100%/9);
           display: flex;
           align-items: center;
-          position: relative;
-          border: red solid 1px; }
+          position: relative; }
           .game-wrapper .game-table tbody tr td div {
             margin: auto;
             color: white;
@@ -50,7 +49,7 @@
   top: 200px; }
 
 #game-2 > tbody > tr > td > div {
-  top: 200px; }
+  top: 500px; }
 
 .cta-btn {
   margin: 0px 15px 0px 0px; }
