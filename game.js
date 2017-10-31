@@ -45,13 +45,15 @@ function gameFunctionLevel2() {
 }
 
 function getRandomElement() {
-  if (startTime == 0) {
+  if ((startTime == 0) && (currentScore.innerHTML > 0)) {
     if (gameTable.id == "game-1") {
       scrollNextLevel();
       return;
     } else {
       return;
     }
+  } else if (startTime == 0) {
+    return;
   }
   var selected = getElement("invisible", getRandomNumber(9));
   selected.className = "visible";
