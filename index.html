@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Wackamole</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>Wackamole</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="game-banner"><h2>Heading goes here!</h2></div>
-  <div class="container">
-    <div class="row level-wrapper">
-      <span><button class="btn btn-primary btn-warning cta-btn" id="start-btn-1">Start Game!</button></span>
-      <span>SCORE = </span>
-      <span class="score">0</span>
-      <span>Time: </span>
-      <span id="timer-1"></span>
-    </div>
-
-    <div class="row game-wrapper">
-      <table class="game-table" id="game-1">
-        <tbody>
-          <tr>
-            <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
-            <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
-            <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
-            <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
-            <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
-            <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
-            <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
-            <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
-            <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-<!--     <div class="game-wrapper game-2">
-      <div class="level-wrapper">
-        <span><button class="btn btn-primary btn-warning cta-btn" id="start-btn-2">Start Game!</button></span>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="game-banner"><h2>Heading goes here!</h2></div>
+    <div class="container">
+      <div class="row level-wrapper">
+        <span><button class="btn btn-primary btn-warning cta-btn" id="start-btn-1">Start Game!</button></span>
         <span>SCORE = </span>
         <span class="score">0</span>
         <span>Time: </span>
-        <span id="timer-2"></span>
-      </div> -->
+        <span id="timer-1"></span>
+      </div>
 
-  </div>
-  <script src="game.js"></script>
-</body>
+      <div class="row game-wrapper">
+        <table class="game-table" id="game-1">
+          <tbody>
+            <tr class="background-image">
+              <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
+              <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
+              <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
+              <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
+              <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
+              <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
+              <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
+              <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
+              <td><div class="invisible"><i class="fa fa-ship fa-3x" aria-hidden="true"></i></div></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <div class="background"></div> -->
+      </div>
+
+      <!--     <div class="game-wrapper game-2">
+        <div class="level-wrapper">
+          <span><button class="btn btn-primary btn-warning cta-btn" id="start-btn-2">Start Game!</button></span>
+          <span>SCORE = </span>
+          <span class="score">0</span>
+          <span>Time: </span>
+          <span id="timer-2"></span>
+        </div> -->
+
+      </div>
+    <script src="game.js"></script>
+  </body>
 </html>

@@ -24,17 +24,14 @@
   overflow: hidden;
   height: 100%;
   .game-table {
-    z-index: 1;
     width: 100%;
     tbody {
       width: 100%;
       tr {
         display: flex;
-        background-image: url("../images/under-water-2.jpg");
+        z-index: 1;
         // background-position: 0px -10px;
         // background-size: 100% 150%;
-        background-size: cover;
-        filter: grayscale(80%) contrast(125%) saturate(180%);
         td {
           height: 800px;
           flex: 0 0 calc(100%/9);
@@ -50,6 +47,21 @@
             transform: translateX(-50%);
           }
         }
+      }
+      .background-image {
+        position: relative;
+      }
+      .background-image:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-image:url("../images/under-water-2.jpg");
+        background-size: cover;
+        filter: grayscale(80%) contrast(125%) saturate(180%) brightness(0.4);
+        z-index: -1;
       }
     }
   }
