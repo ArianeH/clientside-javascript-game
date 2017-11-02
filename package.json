@@ -18,6 +18,9 @@
   "homepage": "https://github.com/ArianeH/javascript-practice-project#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-jasmine": "^2.4.2",
+    "gulp-jasmine-browser": "^1.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11"
   }
 }
