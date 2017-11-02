@@ -53,6 +53,7 @@ function getRandomElement() {
       return;
     }
   } else if (startTime == 0) {
+    document.getElementById("level-message").innerHTML = "Not enough points reached! Restart game!";
     return;
   }
   var selected = getElement("invisible", getRandomNumber(9));
@@ -76,6 +77,7 @@ function getRandomElement() {
 }
 
 function restartGameFunction() {
+  document.getElementById("level-message").innerHTML = "";
   currentScore.innerHTML = 0;
   startTime = 101;
 }
