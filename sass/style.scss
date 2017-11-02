@@ -16,20 +16,33 @@
 }
 .level-wrapper {
   background-color: #4d82b4;
-  z-index: 2;
   padding: 10px;
   margin-top: 10px;
 }
 .game-wrapper {
   overflow: hidden;
   height: 100%;
+  position: relative;
+  #level-message {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #b10000;
+    font-size: 50px;
+  }
   .game-table {
+    position: absolute;
     width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
     tbody {
       width: 100%;
       tr {
         display: flex;
-        z-index: 1;
         // background-position: 0px -10px;
         // background-size: 100% 150%;
         td {
@@ -50,6 +63,7 @@
       }
       .background-image {
         position: relative;
+
       }
       .background-image:before {
         content: "";
@@ -58,7 +72,7 @@
         height: 100%;
         top: 0px;
         left: 0px;
-        background-image:url("../images/under-water-2.jpg");
+        background-image: url("../images/under-water-2.jpg");
         background-size: cover;
         filter: grayscale(80%) contrast(125%) saturate(180%) brightness(0.4);
         z-index: -1;
@@ -95,6 +109,4 @@
   -webkit-transition: margin-top 2s ease-out;
   z-index: 1;
 }
-#level-message {
-  margin-left: 20px;
-}
+

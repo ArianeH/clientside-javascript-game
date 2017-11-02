@@ -53,7 +53,7 @@ function getRandomElement() {
       return;
     }
   } else if (startTime == 0) {
-    document.getElementById("level-message").innerHTML = "Not enough points reached! Restart game!";
+    document.getElementById("level-message").innerHTML = "GAME OVER!";
     return;
   }
   var selected = getElement("invisible", getRandomNumber(9));

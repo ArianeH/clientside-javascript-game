@@ -15,20 +15,32 @@
 
 .level-wrapper {
   background-color: #4d82b4;
-  z-index: 2;
   padding: 10px;
   margin-top: 10px; }
 
 .game-wrapper {
   overflow: hidden;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
+  .game-wrapper #level-message {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #b10000;
+    font-size: 50px; }
   .game-wrapper .game-table {
-    width: 100%; }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px; }
     .game-wrapper .game-table tbody {
       width: 100%; }
       .game-wrapper .game-table tbody tr {
-        display: flex;
-        z-index: 1; }
+        display: flex; }
         .game-wrapper .game-table tbody tr td {
           height: 800px;
           flex: 0 0 calc(100%/9);
@@ -83,6 +95,3 @@
 #game-1 {
   -webkit-transition: margin-top 2s ease-out;
   z-index: 1; }
-
-#level-message {
-  margin-left: 20px; }
