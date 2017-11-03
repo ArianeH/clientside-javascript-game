@@ -34,7 +34,6 @@ function gameFunctionLevel1() {
 function gameFunctionLevel2() {
   gameTable.id = "game-2";
 
-  console.log("IN GAME 2")
   runTimer("timer-1");
 
   setInterval(function() { getRandomElement() },3000);

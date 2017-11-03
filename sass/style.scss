@@ -26,7 +26,7 @@
   #level-message {
     position: absolute;
     top: 40%;
-    transform: translateY(-50%);
+    transform: translateY(-60%);
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -51,7 +51,7 @@
           display: flex;
           align-items: center;
           position: relative;
-          // border: red solid 1px;
+          border: red solid 1px;
           div {
             margin: auto;
             color: white;
@@ -63,7 +63,6 @@
       }
       .background-image {
         position: relative;
-
       }
       .background-image:before {
         content: "";

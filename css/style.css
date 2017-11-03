@@ -25,7 +25,7 @@
   .game-wrapper #level-message {
     position: absolute;
     top: 40%;
-    transform: translateY(-50%);
+    transform: translateY(-60%);
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -46,7 +46,8 @@
           flex: 0 0 calc(100%/9);
           display: flex;
           align-items: center;
-          position: relative; }
+          position: relative;
+          border: red solid 1px; }
           .game-wrapper .game-table tbody tr td div {
             margin: auto;
             color: white;
