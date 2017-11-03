@@ -86,6 +86,7 @@ function scrollNextLevel() {
   levelOne.style.marginTop = "-300px";
   startButton1.id = "start-btn-2";
   startButton1.innerHTML = "Start Game!";
+  document.getElementById("timer-1").innerHTML = 100;
   var startButton2 = document.getElementById("start-btn-2");
   startButton2.addEventListener('click', gameFunctionLevel2);
 }

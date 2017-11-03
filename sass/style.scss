@@ -1,11 +1,11 @@
 .game-banner {
   height: 11vh;
-  background-color: #535f6a;
+  background-color: #5b6d7b;
   margin-top: 0px;
   padding: 20px;
   h2 {
     color: white;
-    margin: 0px;
+    margin: 0px 15px;
   }
 }
 .container {
@@ -15,9 +15,10 @@
   height: calc(100vh - 11vh);
 }
 .level-wrapper {
-  background-color: #3f607f;
+  background-color: #2f404e;
   padding: 10px;
   margin-top: 15px;
+  color: white;
 }
 .game-wrapper {
   overflow: hidden;
