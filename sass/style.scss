@@ -1,5 +1,6 @@
 .container {
   background-color: #f3f3f3;
+ // background-color: darkgrey;
   width: auto;
   padding: 0px 50px;
   height: 500px;
@@ -29,11 +30,12 @@
     transform: translateY(-60%);
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 3;
     color: #b10000;
     font-size: 50px;
   }
   .game-table {
+    z-index: 2;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -51,7 +53,7 @@
           display: flex;
           align-items: center;
           position: relative;
-          border: red solid 1px;
+          // border: red solid 1px;
           div {
             margin: auto;
             color: white;

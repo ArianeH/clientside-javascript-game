@@ -28,10 +28,11 @@
     transform: translateY(-60%);
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 3;
     color: #b10000;
     font-size: 50px; }
   .game-wrapper .game-table {
+    z-index: 2;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -46,8 +47,7 @@
           flex: 0 0 calc(100%/9);
           display: flex;
           align-items: center;
-          position: relative;
-          border: red solid 1px; }
+          position: relative; }
           .game-wrapper .game-table tbody tr td div {
             margin: auto;
             color: white;
