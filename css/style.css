@@ -1,17 +1,17 @@
-.container {
-  background-color: #f3f3f3;
-  width: auto;
-  padding: 0px 50px;
-  height: 500px; }
-
 .game-banner {
-  height: 80px;
+  height: 11vh;
   background-color: grey;
   margin-top: 0px;
   padding: 20px; }
   .game-banner h2 {
     color: white;
     margin: 0px; }
+
+.container {
+  background-color: #f3f3f3;
+  width: auto;
+  padding: 0px 50px;
+  height: calc(100vh - 11vh); }
 
 .level-wrapper {
   background-color: #4d82b4;
@@ -20,7 +20,7 @@
 
 .game-wrapper {
   overflow: hidden;
-  height: 100%;
+  min-height: 75vh;
   position: relative; }
   .game-wrapper #level-message {
     position: absolute;
