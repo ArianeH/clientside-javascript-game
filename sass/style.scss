@@ -1,6 +1,6 @@
 .game-banner {
   height: 11vh;
-  background-color: grey;
+  background-color: #535f6a;
   margin-top: 0px;
   padding: 20px;
   h2 {
@@ -9,15 +9,15 @@
   }
 }
 .container {
-  background-color: #f3f3f3;
+  background-color: #e0e0e0;
   width: auto;
   padding: 0px 50px;
   height: calc(100vh - 11vh);
 }
 .level-wrapper {
-  background-color: #4d82b4;
+  background-color: #3f607f;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .game-wrapper {
   overflow: hidden;
@@ -30,7 +30,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
-    color: #b10000;
+    color: #711616;
     font-size: 50px;
   }
   .game-table {
@@ -86,8 +86,16 @@
 #game-2 > tbody > tr > td > div {
   top: 500px;
 }
-.cta-btn {
+.cta-btn, .cta-btn:focus {
   margin: 0px 15px 0px 0px;
+  background-color: #8e3434;
+  border: none;
+  outline: none;
+}
+.cta-btn:hover, .cta-btn:active {
+  background-color: #711616 !important;
+  border: none;
+  outline: none !important;
 }
 .score {
   margin-right: 20px;
@@ -102,7 +110,7 @@
   color: lightyellow;
 }
 .red {
-  color: red !important;
+  color: #711616 !important;
   font-size: 120%;
 }
 #game-1 {
