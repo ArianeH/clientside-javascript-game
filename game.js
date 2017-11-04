@@ -113,8 +113,10 @@ function getPoint(element) {
     currentScore.innerHTML--;
 } else if (elementsFirstChild.className == smallShip) {
   currentScore.innerHTML = parseInt(currentScore.innerHTML) + 2;
+  startTime += 25;
 } else if (elementsFirstChild.className == largeShip) {
   currentScore.innerHTML = parseInt(currentScore.innerHTML) + 1;
+  startTime += 15;
 }
 }
 
