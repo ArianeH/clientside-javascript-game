@@ -70,7 +70,7 @@ function getRandomElement() {
 
   setTimeout(function changeToInvisible() {
     selected.className = "invisible";
-    changeToSharkOrShip(selected.firstChild);
+    changeToSharkOrShip(selected.firstChild, getRandomNumber(10));
     selected.removeEventListener('click', getPointFunction);
   },2000);
 };
@@ -122,8 +122,7 @@ function getPoint(element) {
   }
 };
 
-function changeToSharkOrShip(elementsFirstChild) {
-  var num = getRandomNumber(10)
+function changeToSharkOrShip(elementsFirstChild, num) {
   if (num <= 3) {
     elementsFirstChild.className = largeShark;
   } else {

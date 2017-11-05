@@ -5,7 +5,17 @@ describe('Sample', function(){
 });
 
 describe('Game', function(){
-  it('change to shark or ship', function () {
-    expect(document.getElementsByClassName("invisible")[Math.floor(Math.random() * 9)].firstChild.className).toEqual(largeShark);
+  it('should change to shark', function () {
+    var largeShark = "fa fa-fighter-jet fa-4x";
+    var element = document.createElement("DIV");
+    changeToSharkOrShip(element, 2);
+    expect(element.className).toEqual(largeShark);
   });
+
+  it('should change to ship', function() {
+    var smallShip = "fa fa-ship fa-3x";
+    var element = document.createElement("DIV");
+    changeToSharkOrShip(element, 4);
+    expect(element.className).toEqual(smallShip);
+  })
 });
