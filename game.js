@@ -19,7 +19,7 @@ function runTimer(timerId) {
       document.getElementById(timerId).innerHTML = startTime;
     }
   },100);
-}
+};
 
 function gameFunctionLevel1() {
   runTimer("timer-1");
@@ -29,7 +29,7 @@ function gameFunctionLevel1() {
   startButton1.innerHTML = "Restart Game!";
   startButton1.removeEventListener('click', gameFunctionLevel1);
   document.getElementById("restart-btn-1").addEventListener('click', restartGameFunction);
-}
+};
 
 function gameFunctionLevel2() {
   gameTable.id = "game-2";
@@ -41,7 +41,7 @@ function gameFunctionLevel2() {
   startButton1.innerHTML = "Restart Game!";
   startButton1.removeEventListener('click', gameFunctionLevel2);
   document.getElementById("restart-btn-2").addEventListener('click', restartGameFunction);
-}
+};
 
 function getRandomElement() {
   if ((startTime == 0) && (currentScore.innerHTML > 0)) {
@@ -73,13 +73,13 @@ function getRandomElement() {
     changeToSharkOrShip(selected.firstChild);
     selected.removeEventListener('click', getPointFunction);
   },2000);
-}
+};
 
 function restartGameFunction() {
   document.getElementById("level-message").innerHTML = "";
   currentScore.innerHTML = 0;
   startTime = 101;
-}
+};
 
 function scrollNextLevel() {
   var levelOne = document.getElementById('game-1');
@@ -89,36 +89,38 @@ function scrollNextLevel() {
   document.getElementById("timer-1").innerHTML = 100;
   var startButton2 = document.getElementById("start-btn-2");
   startButton2.addEventListener('click', gameFunctionLevel2);
-}
+};
 
 function getRandomNumber(max) {
   return Math.floor(Math.random() * max);
-}
+};
 
 function getElement(className, num) {
   return document.getElementsByClassName(className)[num];
-}
+};
 
 function getPoint(element) {
   element.classList.add("red");
 
+  expodingShip(element);
+
   setTimeout(function changeToInvisible() {
     element.className = "invisible";
-  },200);
+  },500);
 
   var elementsFirstChild = element.firstChild
 
   if (((elementsFirstChild.className == smallShark) || (elementsFirstChild.className == largeShark))
     && currentScore.innerHTML > 0) {
     currentScore.innerHTML--;
-} else if (elementsFirstChild.className == smallShip) {
-  currentScore.innerHTML = parseInt(currentScore.innerHTML) + 2;
-  startTime += 25;
-} else if (elementsFirstChild.className == largeShip) {
-  currentScore.innerHTML = parseInt(currentScore.innerHTML) + 1;
-  startTime += 15;
-}
-}
+  } else if (elementsFirstChild.className == smallShip) {
+    currentScore.innerHTML = parseInt(currentScore.innerHTML) + 2;
+    startTime += 55;
+  } else if (elementsFirstChild.className == largeShip) {
+    currentScore.innerHTML = parseInt(currentScore.innerHTML) + 1;
+    startTime += 35;
+  }
+};
 
 function changeToSharkOrShip(elementsFirstChild) {
   var num = getRandomNumber(10)
@@ -127,5 +129,48 @@ function changeToSharkOrShip(elementsFirstChild) {
   } else {
     elementsFirstChild.className = smallShip;
   }
-}
+};
 
+function expodingShip(element) {
+  var shakingElementsList = document.getElementsByClassName("visible");
+  var shakingElements = shakingElementsList[0];
+
+  var shake = function (element, magnitude = 16, angular = false) {
+    var tiltAngle = 1;
+    var counter = 1;
+    var numberOfShakes = 15;
+    var startX = 0;
+    var startY = 0;
+    var startAngle = 0;
+
+    var magnitudeUnit = magnitude / numberOfShakes;
+
+    var randomNum = (min, max) => {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    upAndDownShake();
+
+    function upAndDownShake() {
+      if (counter < numberOfShakes) {
+        element.style.transform = 'translate(' + startX + 'px, ' + startY + 'px)';
+        magnitude -= magnitudeUnit;
+
+        var randomX = randomNum(-magnitude, magnitude);
+        var randomY = randomNum(-magnitude, magnitude);
+        element.style.transform = 'translate(' + randomX + 'px, ' + randomY + 'px)';
+
+        counter += 1;
+
+        requestAnimationFrame(upAndDownShake);
+      }
+      if (counter >= numberOfShakes) {
+        element.style.transform = 'translate(' + startX + ', ' + startY + ')';
+      }
+    }
+  };
+
+  shakingElements.addEventListener('click', (e) => {
+    shake(e.currentTarget);
+  });
+};
