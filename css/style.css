@@ -15,12 +15,26 @@
   height: calc(100vh - 11vh); }
 
 .level-wrapper {
+  height: 50px;
   background-color: #2f404e;
   padding: 10px;
   margin-top: 15px;
-  color: white; }
+  color: white;
+  position: relative; }
+  .level-wrapper .wrapper-item {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute; }
   .level-wrapper #level-info {
-    margin-left: 50px; }
+    right: 350px; }
+  .level-wrapper #score-title {
+    left: 150px; }
+  .level-wrapper .score {
+    left: 220px; }
+  .level-wrapper #timer-title {
+    left: 280px; }
+  .level-wrapper .timer {
+    left: 320px; }
 
 .game-wrapper {
   overflow: hidden;

@@ -87,6 +87,7 @@ function restartGameFunction() {
 function scrollNextLevel() {
   var levelOne = document.getElementById('game-1');
   levelOne.style.marginTop = "-300px";
+  levelInfo.innerHTML = "Reach at least 10 points!"
   startButton1.id = "start-btn-2";
   startButton1.innerHTML = "Start Game!";
   document.getElementById("timer-1").innerHTML = 100;

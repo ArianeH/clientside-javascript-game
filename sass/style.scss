@@ -16,12 +16,31 @@
   height: calc(100vh - 11vh);
 }
 .level-wrapper {
+  height: 50px;
   background-color: #2f404e;
   padding: 10px;
   margin-top: 15px;
   color: white;
+  position: relative;
+  .wrapper-item {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+  }
   #level-info {
-    margin-left: 50px;
+    right: 350px;
+  }
+  #score-title {
+    left: 150px;
+  }
+  .score {
+    left: 220px;
+  }
+  #timer-title {
+    left: 280px;
+  }
+  .timer {
+    left: 320px;
   }
 }
 .game-wrapper {
