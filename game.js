@@ -5,6 +5,9 @@ const largeShark = "fa fa-fighter-jet fa-4x";
 const currentScore = getElement("score", 0);
 const startButton1 = document.getElementById("start-btn-1");
 const gameTable = getElement("game-table", 0);
+var levelInfo = document.getElementById("level-info");
+
+levelInfo.innerHTML = "Reach at least 5 points!";
 
 startButton1.addEventListener('click', gameFunctionLevel1)
 
@@ -160,7 +163,6 @@ function expodingShip(element) {
         element.style.transform = 'translate(' + randomX + 'px, ' + randomY + 'px)';
 
         counter += 1;
-
         requestAnimationFrame(upAndDownShake);
       }
       if (counter >= numberOfShakes) {
