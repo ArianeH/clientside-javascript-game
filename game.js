@@ -71,6 +71,9 @@ function getRandomElement() {
   var getPointFunction = function() { getPoint(selected) }
   selected.addEventListener( 'click', getPointFunction);
 
+  var explodingShipFunction = function() { explodingElement(selected) }
+  selected.addEventListener( 'click', explodingShipFunction);
+
   setTimeout(function changeToInvisible() {
     selected.className = "invisible";
     changeToSharkOrShip(selected.firstChild, getRandomNumber(10));
@@ -106,8 +109,6 @@ function getElement(className, num) {
 function getPoint(element) {
   element.classList.add("red");
 
-  expodingShip(element);
-
   setTimeout(function changeToInvisible() {
     element.className = "invisible";
   },500);
@@ -134,45 +135,36 @@ function changeToSharkOrShip(elementsFirstChild, num) {
   }
 };
 
-function expodingShip(element) {
-  var shakingElementsList = document.getElementsByClassName("visible");
-  var shakingElements = shakingElementsList[0];
+function explodingElement(element, magnitude = 16) {
+  var tiltAngle = 1;
+  var counter = 1;
+  var numberOfShakes = 15;
+  var startX = 0;
+  var startY = 0;
+  var startAngle = 0;
 
-  var shake = function (element, magnitude = 16, angular = false) {
-    var tiltAngle = 1;
-    var counter = 1;
-    var numberOfShakes = 15;
-    var startX = 0;
-    var startY = 0;
-    var startAngle = 0;
+  var magnitudeUnit = magnitude / numberOfShakes;
 
-    var magnitudeUnit = magnitude / numberOfShakes;
-
-    var randomNum = (min, max) => {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    };
-
-    upAndDownShake();
-
-    function upAndDownShake() {
-      if (counter < numberOfShakes) {
-        element.style.transform = 'translate(' + startX + 'px, ' + startY + 'px)';
-        magnitude -= magnitudeUnit;
-
-        var randomX = randomNum(-magnitude, magnitude);
-        var randomY = randomNum(-magnitude, magnitude);
-        element.style.transform = 'translate(' + randomX + 'px, ' + randomY + 'px)';
-
-        counter += 1;
-        requestAnimationFrame(upAndDownShake);
-      }
-      if (counter >= numberOfShakes) {
-        element.style.transform = 'translate(' + startX + ', ' + startY + ')';
-      }
-    }
+  var randomNum = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  shakingElements.addEventListener('click', (e) => {
-    shake(e.currentTarget);
-  });
+  shakeElement();
+
+  function shakeElement() {
+    if (counter < numberOfShakes) {
+      element.style.transform = 'translate(' + startX + 'px, ' + startY + 'px)';
+      magnitude -= magnitudeUnit;
+
+      var randomX = randomNum(-magnitude, magnitude);
+      var randomY = randomNum(-magnitude, magnitude);
+      element.style.transform = 'translate(' + randomX + 'px, ' + randomY + 'px)';
+
+      counter += 1;
+      requestAnimationFrame(shakeElement);
+    }
+    if (counter >= numberOfShakes) {
+      element.style.transform = 'translate(' + startX + ', ' + startY + ')';
+    }
+  }
 };
