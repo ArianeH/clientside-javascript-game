@@ -47,7 +47,7 @@ function gameFunctionLevel2() {
 };
 
 function getRandomElement() {
-  if ((startTime == 0) && (currentScore.innerHTML > 0)) {
+  if ((startTime == 0) && (currentScore.innerHTML > 4)) {
     if (gameTable.id == "game-1") {
       scrollNextLevel();
       return;
@@ -135,17 +135,15 @@ function changeToSharkOrShip(elementsFirstChild, num) {
   }
 };
 
-function explodingElement(element, magnitude = 16) {
-  var tiltAngle = 1;
+function explodingElement(element, magnitude = 26) {
   var counter = 1;
-  var numberOfShakes = 15;
-  var startX = 0;
+  var numberOfShakes = 25;
+  var startX = -35;
   var startY = 0;
-  var startAngle = 0;
 
   var magnitudeUnit = magnitude / numberOfShakes;
 
-  var randomNum = (min, max) => {
+  function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
@@ -156,14 +154,14 @@ function explodingElement(element, magnitude = 16) {
       element.style.transform = 'translate(' + startX + 'px, ' + startY + 'px)';
       magnitude -= magnitudeUnit;
 
-      var randomX = randomNum(-magnitude, magnitude);
-      var randomY = randomNum(-magnitude, magnitude);
+      var randomX = randomNumber(-magnitude, magnitude)-35;
+      var randomY = randomNumber(-magnitude, magnitude);
       element.style.transform = 'translate(' + randomX + 'px, ' + randomY + 'px)';
 
       counter += 1;
       requestAnimationFrame(shakeElement);
     }
-    if (counter >= numberOfShakes) {
+    else {
       element.style.transform = 'translate(' + startX + ', ' + startY + ')';
     }
   }
