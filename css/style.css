@@ -87,7 +87,7 @@
         z-index: -1; }
 
 #game-1 > tbody > tr > td > div {
-  top: 200px; }
+  top: 180px; }
 
 #game-2 > tbody > tr > td > div {
   top: 500px; }
@@ -122,3 +122,9 @@
 #game-1 {
   -webkit-transition: margin-top 2s ease-out;
   z-index: 1; }
+
+.small-ship img {
+  max-width: 95px; }
+
+.large-ship img {
+  max-width: 155px; }

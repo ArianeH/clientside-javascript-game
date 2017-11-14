@@ -1,5 +1,5 @@
-const smallShip = "fa fa-ship fa-3x";
-const largeShip = "fa fa-ship fa-4x";
+const smallShip = "small-ship";
+const largeShip = "large-ship";
 const smallShark = "fa fa-fighter-jet fa-3x";
 const largeShark = "fa fa-fighter-jet fa-4x";
 const currentScore = getElement("score", 0);
@@ -61,7 +61,7 @@ function getRandomElement() {
   var selected = getElement("invisible", getRandomNumber(9));
   selected.className = "visible";
 
-  var ship = selected.getElementsByClassName("fa fa-ship")[0];
+  var ship = selected.getElementsByClassName("small-ship")[0];
   if (ship) {
     setTimeout(function increaseSize() {
       ship.className = largeShip;
@@ -129,7 +129,8 @@ function getPoint(element) {
 
 function changeToSharkOrShip(elementsFirstChild, num) {
   if (num <= 3) {
-    elementsFirstChild.className = largeShark;
+    // elementsFirstChild.className = largeShark;
+    document.getElementById("game-icon").src="../images/shark.png";
   } else {
     elementsFirstChild.className = smallShip;
   }
@@ -154,7 +155,7 @@ function explodingElement(element, magnitude = 26) {
       element.style.transform = 'translate(' + startX + 'px, ' + startY + 'px)';
       magnitude -= magnitudeUnit;
 
-      var randomX = randomNumber(-magnitude, magnitude)-35;
+      var randomX = randomNumber(-magnitude, magnitude);
       var randomY = randomNumber(-magnitude, magnitude);
       element.style.transform = 'translate(' + randomX + 'px, ' + randomY + 'px)';
 
