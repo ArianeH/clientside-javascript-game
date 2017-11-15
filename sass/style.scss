@@ -142,11 +142,17 @@
 }
 .small-ship {
   max-width: 95px;
+  content:url("../images/ship-2.png");
 }
 .small-shark {
   max-width: 70px;
   filter: invert(100%);
 }
-.large-ship, .large-shark {
+.large-ship {
   max-width: 155px;
+  content:url("../images/ship-2.png");
+}
+.large-shark {
+  max-width: 155px;
+  content:url("../images/shark.png");
 }
