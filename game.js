@@ -68,11 +68,11 @@ function getRandomElement() {
       ship.className = largeShip;
     },800);
   }
-  // else {
-  //   setTimeout(function increaseSize() {
-  //     selected.className = largeShark;
-  //   },800);
-  // }
+  else {
+    setTimeout(function increaseSize() {
+      selected.className = largeShark;
+    },800);
+  }
 
   var getPointFunction = function() { getPoint(selected) }
   selected.addEventListener( 'click', getPointFunction);
@@ -115,7 +115,7 @@ function getElement(className, num) {
 
 function getPoint(element) {
   var elementsFirstChild = element.firstChild;
-  elementsFirstChild.classList.add("orange");
+  elementsFirstChild.id = "orange";
 
   setTimeout(function changeToInvisible() {
     element.className = "invisible";

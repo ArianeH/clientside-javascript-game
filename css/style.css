@@ -115,7 +115,7 @@
 .visible:hover {
   color: lightyellow; }
 
-.orange {
+#orange {
   -webkit-filter: sepia() brightness(50%) saturate(1000%) hue-rotate(310deg); }
 
 #game-1 {
