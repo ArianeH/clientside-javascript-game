@@ -123,8 +123,8 @@
   -webkit-transition: margin-top 2s ease-out;
   z-index: 1; }
 
-.small-ship img {
+.small-ship, .small-shark {
   max-width: 95px; }
 
-.large-ship img {
+.large-ship, .large-shark {
   max-width: 155px; }

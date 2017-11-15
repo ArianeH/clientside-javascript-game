@@ -1,18 +1,18 @@
 const smallShip = "small-ship";
 const largeShip = "large-ship";
-const smallShark = "fa fa-fighter-jet fa-3x";
-const largeShark = "fa fa-fighter-jet fa-4x";
+const smallShark = "small-shark";
+const largeShark = "large-shark";
 const currentScore = getElement("score", 0);
 const startButton1 = document.getElementById("start-btn-1");
 const gameTable = getElement("game-table", 0);
 var levelInfo = document.getElementById("level-info");
+var startTime
 
 levelInfo.innerHTML = "Reach at least 5 points!";
 
 startButton1.addEventListener('click', gameFunctionLevel1)
 
-var startTime
-
+// sets start time and descreases it per second
 function runTimer(timerId) {
   startTime = 100;
   document.getElementById(timerId).innerHTML = startTime;
@@ -24,6 +24,7 @@ function runTimer(timerId) {
   },100);
 };
 
+// activated the timer-1, calls getRandomElement function and reassignes functionality to buttons
 function gameFunctionLevel1() {
   runTimer("timer-1");
 
@@ -130,7 +131,8 @@ function getPoint(element) {
 function changeToSharkOrShip(elementsFirstChild, num) {
   if (num <= 3) {
     // elementsFirstChild.className = largeShark;
-    document.getElementById("game-icon").src="../images/shark.png";
+    elementsFirstChild.src = "../images/shark.png";
+    elementsFirstChild.className = smallShark;
   } else {
     elementsFirstChild.className = smallShip;
   }
@@ -155,7 +157,7 @@ function explodingElement(element, magnitude = 26) {
       element.style.transform = 'translate(' + startX + 'px, ' + startY + 'px)';
       magnitude -= magnitudeUnit;
 
-      var randomX = randomNumber(-magnitude, magnitude);
+      var randomX = randomNumber(-magnitude, magnitude)-65;
       var randomY = randomNumber(-magnitude, magnitude);
       element.style.transform = 'translate(' + randomX + 'px, ' + randomY + 'px)';
 
