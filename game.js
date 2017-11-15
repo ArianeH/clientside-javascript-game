@@ -108,29 +108,37 @@ function getElement(className, num) {
 };
 
 function getPoint(element) {
-  element.classList.add("red");
+  var elementsFirstChild = element.firstChild
+  element.classList.add("orange");
 
   setTimeout(function changeToInvisible() {
     element.className = "invisible";
   },500);
 
-  var elementsFirstChild = element.firstChild
+  function removeEventListener() {
+    elementsFirstChild.classList.add("clicked-element-once");
+  }
 
-  if (((elementsFirstChild.className == smallShark) || (elementsFirstChild.className == largeShark))
+  if (elementsFirstChild.className == "clicked-element-once") {
+    currentScore.innerHTML = parseInt(currentScore.innerHTML) + 0;
+    startTime += 0;
+  } else if (((elementsFirstChild.className == smallShark) || (elementsFirstChild.className == largeShark))
     && currentScore.innerHTML > 0) {
     currentScore.innerHTML--;
+    removeEventListener();
   } else if (elementsFirstChild.className == smallShip) {
     currentScore.innerHTML = parseInt(currentScore.innerHTML) + 2;
     startTime += 55;
+    removeEventListener();
   } else if (elementsFirstChild.className == largeShip) {
     currentScore.innerHTML = parseInt(currentScore.innerHTML) + 1;
     startTime += 35;
+    removeEventListener();
   }
 };
 
 function changeToSharkOrShip(elementsFirstChild, num) {
   if (num <= 3) {
-    // elementsFirstChild.className = largeShark;
     elementsFirstChild.src = "../images/shark.png";
     elementsFirstChild.className = smallShark;
   } else {

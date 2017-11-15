@@ -133,16 +133,19 @@
 .visible:hover {
   color: lightyellow;
 }
-.red {
-  color: #711616 !important;
-  font-size: 120%;
+.orange {
+  -webkit-filter: sepia() brightness(50%) saturate(1000%) hue-rotate(310deg);
 }
 #game-1 {
   -webkit-transition: margin-top 2s ease-out;
   z-index: 1;
 }
-.small-ship, .small-shark {
+.small-ship {
   max-width: 95px;
+}
+.small-shark {
+  max-width: 70px;
+  filter: invert(100%);
 }
 .large-ship, .large-shark {
   max-width: 155px;
