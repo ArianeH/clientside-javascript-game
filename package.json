@@ -4,7 +4,7 @@
   "description": "javascript-practice-project",
   "main": "game.js",
   "scripts": {
-    "start": "npm run ",
+    "start": "npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
