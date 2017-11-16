@@ -14,14 +14,14 @@ startButton1.addEventListener('click', gameFunctionLevel1)
 
 // sets start time and descreases it per second
 function runTimer(timerId) {
-  startTime = 100;
+  startTime = 20;
   document.getElementById(timerId).innerHTML = startTime;
   setInterval(function decreaseTime() {
     if (startTime > 0) {
       startTime--;
       document.getElementById(timerId).innerHTML = startTime;
     }
-  },100);
+  },1000);
 };
 
 // activated the timer-1, calls getRandomElement function and reassignes functionality to buttons
@@ -132,18 +132,18 @@ function getPoint(element) {
     removeEventListener();
   } else if (elementsFirstChild.className == smallShip) {
     currentScore.innerHTML = parseInt(currentScore.innerHTML) + 2;
-    startTime += 55;
+    startTime += 5;
     removeEventListener();
   } else if (elementsFirstChild.className == largeShip) {
     currentScore.innerHTML = parseInt(currentScore.innerHTML) + 1;
-    startTime += 35;
+    startTime += 3;
     removeEventListener();
   }
 };
 
 function changeToSharkOrShip(element, num) {
   console.log(element.firstChild.className)
-  if (((element.firstChild.className == smallShip) || (element.firstChild.className == largeShip)) && (num <= 9)) {
+  if (((element.firstChild.className == smallShip) || (element.firstChild.className == largeShip)) && (num <= 3)) {
     element.firstChild.className = smallShark;
   } else {
     element.firstChild.className = smallShip;

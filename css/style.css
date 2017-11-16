@@ -68,6 +68,7 @@
           position: relative; }
           .game-wrapper .game-table tbody tr td div {
             margin: auto;
+            padding: 0px 10px;
             color: white;
             position: absolute;
             left: 50%;
