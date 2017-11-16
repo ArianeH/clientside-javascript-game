@@ -63,12 +63,11 @@ function getRandomElement() {
   selected.className = "visible";
 
   // var ship = selected.getElementsByClassName("small-ship")[0];
-  if (selected.firstChild.className == "small-ship") {
+  if (selected.firstChild.className == smallShip) {
     setTimeout(function increaseSize() {
       selected.firstChild.className = largeShip;
     },800);
-  }
-  else {
+  } else {
     setTimeout(function increaseSize() {
       selected.firstChild.className = largeShark;
     },800);
@@ -116,18 +115,18 @@ function getElement(className, num) {
 
 function getPoint(element) {
   var elementsFirstChild = element.firstChild;
-  elementsFirstChild.id = "orange";
+  element.id = "orange";
 
   setTimeout(function changeToInvisible() {
     element.className = "invisible";
-    elementsFirstChild.id = "white";
+    element.id = "white";
   },500);
 
   function removeEventListener() {
-    elementsFirstChild.classList.add("clicked-element-once");
+    elementsFirstChild.id = ("clicked-element-once");
   }
 
-  if (elementsFirstChild.className == "clicked-element-once") {
+  if (elementsFirstChild.id == "clicked-element-once") {
     currentScore.innerHTML = parseInt(currentScore.innerHTML) + 0;
     startTime += 0;
   } else if (((elementsFirstChild.className == smallShark) || (elementsFirstChild.className == largeShark))
@@ -147,7 +146,7 @@ function getPoint(element) {
 
 function changeToSharkOrShip(element, num) {
   console.log(element.firstChild.className)
-  if (((element.firstChild.className == smallShip) || (element.firstChild.className == largeShip)) && (num <= 3)) {
+  if (((element.firstChild.className == smallShip) || (element.firstChild.className == largeShip)) && (num <= 9)) {
     element.firstChild.className = smallShark;
   } else {
     element.firstChild.className = smallShip;
