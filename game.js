@@ -62,15 +62,15 @@ function getRandomElement() {
   var selected = getElement("invisible", getRandomNumber(9));
   selected.className = "visible";
 
-  var ship = selected.getElementsByClassName("small-ship")[0];
-  if (ship.className == "small-ship") {
+  // var ship = selected.getElementsByClassName("small-ship")[0];
+  if (selected.firstChild.className == "small-ship") {
     setTimeout(function increaseSize() {
-      ship.className = largeShip;
+      selected.firstChild.className = largeShip;
     },800);
   }
   else {
     setTimeout(function increaseSize() {
-      selected.className = largeShark;
+      selected.firstChild.className = largeShark;
     },800);
   }
 
@@ -85,7 +85,8 @@ function getRandomElement() {
     changeToSharkOrShip(selected, getRandomNumber(10));
     selected.removeEventListener('click', getPointFunction);
   },2000);
-  selected.firstChild.class = "small-ship";
+
+  // selected.firstChild.className = smallShip;
 };
 
 function restartGameFunction() {
@@ -119,6 +120,7 @@ function getPoint(element) {
 
   setTimeout(function changeToInvisible() {
     element.className = "invisible";
+    elementsFirstChild.id = "white";
   },500);
 
   function removeEventListener() {
@@ -144,7 +146,8 @@ function getPoint(element) {
 };
 
 function changeToSharkOrShip(element, num) {
-  if (num <= 3) {
+  console.log(element.firstChild.className)
+  if (((element.firstChild.className == smallShip) || (element.firstChild.className == largeShip)) && (num <= 3)) {
     element.firstChild.className = smallShark;
   } else {
     element.firstChild.className = smallShip;

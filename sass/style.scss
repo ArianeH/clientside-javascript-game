@@ -136,6 +136,9 @@
 #orange {
   -webkit-filter: sepia() brightness(50%) saturate(1000%) hue-rotate(310deg);
 }
+#white {
+  -webkit-filter: brightness(100%);
+}
 #game-1 {
   -webkit-transition: margin-top 2s ease-out;
   z-index: 1;
