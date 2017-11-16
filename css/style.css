@@ -127,18 +127,23 @@
 
 .small-ship {
   max-width: 95px;
-  content: url("../images/ship-2.png"); }
+  content: url("../images/ship-2.png");
+  -webkit-filter: brightness(1000%); }
 
 .small-shark {
+  margin-top: 15px;
   max-width: 60px;
   content: url("../images/shark.png");
   filter: invert(100%); }
 
 .large-ship {
+  margin-top: -40px;
   max-width: 155px;
-  content: url("../images/ship-2.png"); }
+  content: url("../images/ship-2.png");
+  -webkit-filter: brightness(1000%); }
 
 .large-shark {
-  max-width: 105px;
+  margin-top: -25px;
+  max-width: 95px;
   content: url("../images/shark.png");
   filter: invert(100%); }

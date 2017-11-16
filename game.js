@@ -62,7 +62,6 @@ function getRandomElement() {
   var selected = getElement("invisible", getRandomNumber(9));
   selected.className = "visible";
 
-  // var ship = selected.getElementsByClassName("small-ship")[0];
   if (selected.firstChild.className == smallShip) {
     setTimeout(function increaseSize() {
       selected.firstChild.className = largeShip;
@@ -84,8 +83,6 @@ function getRandomElement() {
     changeToSharkOrShip(selected, getRandomNumber(10));
     selected.removeEventListener('click', getPointFunction);
   },2000);
-
-  // selected.firstChild.className = smallShip;
 };
 
 function restartGameFunction() {
@@ -172,7 +169,7 @@ function explodingElement(element, magnitude = 26) {
       element.style.transform = 'translate(' + startX + 'px, ' + startY + 'px)';
       magnitude -= magnitudeUnit;
 
-      var randomX = randomNumber(-magnitude, magnitude)-65;
+      var randomX = randomNumber(-magnitude, magnitude)-75;
       var randomY = randomNumber(-magnitude, magnitude);
       element.style.transform = 'translate(' + randomX + 'px, ' + randomY + 'px)';
 
