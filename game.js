@@ -109,7 +109,7 @@ function getRandomNumber(max) {
 };
 
 function getElement(className, num) {
-  return document.getElementsByClassName(className)[num];
+  return window.document.getElementsByClassName(className)[num];
 };
 
 function getPoint(element) {
