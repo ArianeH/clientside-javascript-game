@@ -12,7 +12,7 @@ levelInfo.innerHTML = "Reach at least 5 points!";
 
 startButton1.addEventListener('click', gameFunctionLevel1)
 
-window.addEventListener('load', getElement, false);
+// window.addEventListener('load', getElement, false);
 
 // sets start time and descreases it per second
 function runTimer(timerId) {
@@ -109,7 +109,7 @@ function getRandomNumber(max) {
 };
 
 function getElement(className, num) {
-  return window.document.getElementsByClassName(className)[num];
+  return document.getElementsByClassName(className)[num];
 };
 
 function getPoint(element) {
