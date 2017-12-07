@@ -76,7 +76,6 @@
           display: flex;
           align-items: center;
           position: relative;
-          // border: red solid 1px;
           div {
             margin: auto;
             padding: 0px 10px;
@@ -118,9 +117,9 @@
   outline: none;
 }
 .cta-btn:hover, .cta-btn:active {
-  background-color: #711616 !important;
+  background-color: #711616;
   border: none;
-  outline: none !important;
+  outline: none;
 }
 .score {
   margin-right: 20px;

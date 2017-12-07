@@ -100,9 +100,9 @@
   outline: none; }
 
 .cta-btn:hover, .cta-btn:active {
-  background-color: #711616 !important;
+  background-color: #711616;
   border: none;
-  outline: none !important; }
+  outline: none; }
 
 .score {
   margin-right: 20px; }
